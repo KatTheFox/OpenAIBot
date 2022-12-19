@@ -1,8 +1,11 @@
 {
-    "extends": "isaacscript-tsconfig/tsconfig.node.json",
-    "compilerOptions": {
-        "outDir": "dist"
-    ,
-    },
-    "include": ["./src/**/*.ts"],
+  "extends": "isaacscript-tsconfig/tsconfig.node.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+  },
+  "include": ["./src/**/*.ts"],
 }

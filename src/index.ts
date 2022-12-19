@@ -1,3 +1,4 @@
+/* eslint-disable isaacscript/complete-sentences-line-comments */
 import { Client, Events, GatewayIntentBits } from "discord.js";
 import { commands } from "./commands";
 import { tokens } from "./config.json";
@@ -8,11 +9,11 @@ client.once(Events.ClientReady, (c) => {
 });
 const _ = client.login(tokens.discordtoken);
 
+// (async () => console.log(await (await openai.listModels()).data))();
+
 client.on(Events.InteractionCreate, async (interaction) => {
   if (!interaction.isChatInputCommand()) {
-    return;
-  }
-  if (interaction.command === null) {
+    console.log("interaction not command");
     return;
   }
   const command = commands.get(interaction.commandName);
@@ -21,6 +22,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
     return;
   }
   try {
+    console.log("command try");
     await command.execute(interaction);
   } catch (error) {
     console.error(error);

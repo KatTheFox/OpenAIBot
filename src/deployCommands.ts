@@ -15,9 +15,12 @@ const rest = new REST({ version: "10" }).setToken(tokens.discordtoken);
 const _ = (async () => {
   try {
     console.log(`Started refreshing ${commands.size} application commands`);
-    const _ = await rest.put(Routes.applicationCommands(tokens.appid), {
-      body: [curie.data],
-    });
+    const _ = await rest.put(
+      Routes.applicationGuildCommands(tokens.appid, "938905066709086208"),
+      {
+        body: [curie.data],
+      },
+    );
 
     console.log("Succesfully refreshes commands");
   } catch (e) {

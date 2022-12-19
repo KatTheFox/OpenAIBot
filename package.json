@@ -1,0 +1,15 @@
+{
+  "name": "gptbot",
+  "version": "0.0.1",
+  "description": "A simple discord bot that uses the OpenAI api",
+  "main": "index.js",
+  "author": "KatTheFox",
+  "license": "GPL-3.0-only",
+  "private": false,
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "isaacscript-lint": "^4.2.1",
+    "isaacscript-tsconfig": "^2.2.0",
+    "typescript": "^4.9.4"
+  }
+}

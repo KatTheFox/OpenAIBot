@@ -12,12 +12,14 @@ export const curie = {
         .setDescription("The text to query Curie with"),
     ),
   execute: async (interaction: ChatInputCommandInteraction): Promise<void> => {
-    console.log("curie execute");
+    console.log(
+      `curie execute ${interaction.options.getString("input", true)}`,
+    );
     await openai
       .createCompletion({
         model: "text-curie:001",
         prompt: interaction.options.getString("input", true),
-        max_tokens: 100,
+        max_tokens: 10,
       })
       .then(async (reesponse) => {
         console.log("response recieved");

@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "prepare": "husky install",
-    "deploy": "node dist/deployCommands.ts"
+    "deploy": "node dist/deployCommands.js"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
